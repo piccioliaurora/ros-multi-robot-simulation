@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Spawn the first robot -->
+  <group ns="robot1">
+    <arg name="suffix" value="1"/>
+    <arg name="x" value="0.0"/>
+    <arg name="y" value="2.0"/>
+    <arg name="z" value="1.0"/>
+    <arg name="yaw" value="0.57"/>
+    <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-sdf -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw) -file $(find my_robot)/model/model.sdf -model robot$(arg suffix)" />
+  </group>
+
+  <!-- Spawn the second robot -->
+  <group ns="robot2">
+    <arg name="suffix" value="2"/>
+    <arg name="x" value="-2.0"/>
+    <arg name="y" value="-1.0"/>
+    <arg name="z" value="1.0"/>
+    <arg name="yaw" value="-1.57"/>
+    <node name="spawn_robot2" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-sdf -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw) -file $(find my_robot)/model/model.sdf -model robot$(arg suffix)" />
+  </group>
+</launch>

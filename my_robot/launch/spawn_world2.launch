@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find my_robot)/world/world2.world"/>
+    <arg name="verbose" value="true" />
+  </include>
+
+  <group ns="robot1">
+    <arg name="suffix" value="1"/>
+    <arg name="x" value="0.0"/>
+    <arg name="y" value="-1.0"/>
+    <arg name="z" value="1.0"/>
+    <arg name="yaw" value="-0.79"/>
+    <node name="spawn_robot1" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-sdf -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw) -file $(find my_robot)/model/model.sdf -model robot$(arg suffix)" />
+  </group>
+
+  <group ns="robot2">
+    <arg name="suffix" value="2"/>
+    <arg name="x" value="-1.0"/>
+    <arg name="y" value="-2.5"/>
+    <arg name="z" value="1.0"/>
+    <arg name="yaw" value="0.0"/>
+    <node name="spawn_robot2" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-sdf -x $(arg x) -y $(arg y) -z $(arg z) -Y $(arg yaw) -file $(find my_robot)/model/model.sdf -model robot$(arg suffix)" />
+  </group>
+
+</launch>
