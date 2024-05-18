@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-    <!-- Avvia il nodo per il robot1 -->
-    <node name="robot1" pkg="my_robot" type="robot1.py" output="screen" />
-
-    <!-- Avvia il nodo per il robot2 -->
-    <node name="robot2" pkg="my_robot" type="robot2.py" output="screen" />
-</launch>
