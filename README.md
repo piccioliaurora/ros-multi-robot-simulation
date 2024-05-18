@@ -15,7 +15,7 @@ Installazione:
     
     $ mkdir
     
-  Successivamente va attivatto il workspace, operazione che va fatta ogni volta che si apre il workspace:
+  Successivamente va attivato il workspace, operazione che va fatta ogni volta che si apre il workspace:
   
     $ source ~/catkin_ws/devel/setup.bash
     
@@ -29,7 +29,7 @@ Installazione:
 
   Per installare il pacchetto, copiare l'url:
   
-    $ git clone <url_del_repository_github>
+    $ git clone <https://github.com/piccioliaurora/ros-multi-robot-simulation>
     
   Compilare il pacchetto:
   
