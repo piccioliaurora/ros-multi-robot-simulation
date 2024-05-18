@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node name="robot1" pkg="my_robot" type="robot1.py" output="screen" />
+
+    <node name="robot2" pkg="my_robot" type="robot2.py" output="screen" />
+</launch>
