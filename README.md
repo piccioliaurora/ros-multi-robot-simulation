@@ -1,7 +1,7 @@
 Descrizione:
 
   Lo scopo di questo pacchetto è di simulare uno scenario in cui vengono implementati due robot, uno per la ricerca attiva di un oggetto rosso, l'altro per raggiungerlo.
-  Sono presenti tre scenari Gazebo per testare il comportamento dei robot.
+  Sono presenti tre scenari implementati tramite il simulatore Gazebo, per testare il comportamento dei robot.
   Vengono utilizzati ROS Noetic e Gazebo 11.11.00.
 
 
@@ -13,7 +13,11 @@ Installazione:
     
     $ cd catkin_ws
     
-    $ mkdir
+    $ mkdir src
+
+  Bisogna attivre il workspace ros:
+    
+    $ catkin_make
     
   Successivamente va attivato il workspace, operazione che va fatta ogni volta che si apre il workspace:
   
@@ -25,16 +29,20 @@ Installazione:
     
   Quando il file si è aperto. inserire, nell'ultima riga: 
   
-    $ source ~/catkin_ws/devel/setup.bash 
+    $ source ~/catkin_ws/devel/setup.bash
 
-  Per installare il pacchetto, copiare l'url:
+  Quindi salvare e chiudere l'editor, e aggiornare il file:
+
+    $ source ~/.bashrc
+
+  Per installare il pacchetto e attivarlo:
+
+    $ cd src
   
     $ git clone <https://github.com/piccioliaurora/ros-multi-robot-simulation>
-    
-  Compilare il pacchetto:
-  
-    $ cd catkin_ws
-    
+
+    $ cd ..
+
     $ catkin_make
 
 
