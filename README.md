@@ -15,11 +15,11 @@ Installazione:
     
     $ mkdir src
 
-  Bisogna attivre il workspace ros:
+  Bisogna inizializzare il workspace ros:
     
     $ catkin_make
     
-  Successivamente va attivato il workspace, operazione che va fatta ogni volta che si apre il workspace:
+  Successivamente va attivato il workspace, operazione che va fatta ogni volta che lo si apre:
   
     $ source ~/catkin_ws/devel/setup.bash
     
@@ -27,11 +27,11 @@ Installazione:
   
     $  gedit ~/.bashrc
     
-  Quando il file si è aperto. inserire, nell'ultima riga: 
+  Quando il file si è aperto, inserire nell'ultima riga: 
   
     $ source ~/catkin_ws/devel/setup.bash
 
-  Quindi salvare e chiudere l'editor, e aggiornare il file:
+  Quindi salvare, chiudere l'editor, e aggiornare il file:
 
     $ source ~/.bashrc
 
@@ -57,7 +57,7 @@ Utilizzo:
   
     $ roslaunch my_robot spawn_world.launch
     
-  (Per lanciare la simulazione relativa al secondo e terzo scenaio è equivalente, cambia il nome di file di lancio, 'spawn_world2.launch' e 'spawn_world3.launch' rispettivamente)
+  (Per lanciare la simulazione relativa al secondo e terzo scenario è equivalente, cambia il nome di file di lancio, 'spawn_world2.launch' e 'spawn_world3.launch' rispettivamente)
 
 
   Nel secondo teminale si lancia il programma dei due robot:
